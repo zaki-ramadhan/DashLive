@@ -6,19 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
-        
-        <meta name="description"
-            content="OneBlog adalah platform blogging modern yang mudah digunakan dan aman.">
-        <meta name="keywords" content="blog, blogging, oneblog, platform blog">
-        <meta name="author" content="Zaki R">
 
-        <!-- Untuk SEO tambahan -->
-        <meta property="og:title" content="OneBlog - #1 Platform Blogging">
-        <meta property="og:description"
-            content="OneBlog adalah platform blogging modern yang mudah digunakan dan aman.">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://oneblog.my.id">
-        {{-- <meta property="og:image" content="{{ asset('images/preview.png') }}"> --}}
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
