@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
-
+        
         <meta name="description"
             content="OneBlog adalah platform blogging modern yang mudah digunakan dan aman.">
         <meta name="keywords" content="blog, blogging, oneblog, platform blog">
