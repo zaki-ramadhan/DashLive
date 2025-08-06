@@ -9,17 +9,22 @@ use Illuminate\Support\Facades\Hash;
 
 class Users extends Component
 {
-    public $pageTitle = 'Users Page';
+    public $name = '';
+    public $email = '';
+    public $password = 'password';
 
-    public function addNewUser()
+    public function createNewUser()
     {
         User::create([
-            'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
+            'name' => $this->name,
+            'email' => $this->email,
             'email_verified_at' => now(),
-            'password' => Hash::make('password'),
+            'password' => $this->password ? Hash::make($this->password) : Hash::make('password'),
             'remember_token' => Str::random(10),
         ]);
+
+        // Reset semua field setelah membuat user baru
+        $this->reset();
     }
     public function render()
     {
