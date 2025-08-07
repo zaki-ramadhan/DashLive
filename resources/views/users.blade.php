@@ -18,7 +18,7 @@
 
     <body class="bg-[#FDFDFC]">
         <div class="flex justify-content-center ">
-            <livewire:user-register-form lazy />
+            <livewire:user-register-form />
             <livewire:users-list lazy />
         </div>
 

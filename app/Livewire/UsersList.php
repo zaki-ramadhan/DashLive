@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\User;
+use Livewire\Attributes\Computed;
 use Livewire\Component;
 use Livewire\Attributes\On;
 use Livewire\WithPagination;
@@ -29,13 +30,15 @@ class UsersList extends Component
         return view('livewire.placeholders.users-list-skeleton');
     }
 
-    public function render()
+    // computed property
+    // agar menyimpan data dari database ke dalam cache, mengurangi beban request ke server
+    #[Computed()]
+    public function users()
     {
-        sleep(3);
-        return view('livewire.users-list', [
-            'users' => User::latest()
-                ->where('name', 'like', "%{$this->searchQuery}%")
-                ->paginate(6)
-        ]);
+        return User::latest()
+            ->where('name', 'like', "%{$this->searchQuery}%")
+            ->paginate(6);
     }
+
+    //? jika fungsi render() komponen livewire hanya mengembalikan view, maka bisa dihapus saja
 }

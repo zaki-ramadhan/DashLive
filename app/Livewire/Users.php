@@ -16,11 +16,5 @@ class Users extends Component
     
     public function render()
     {
-        // lakukan pencarian berdasarkan query sebelum render
-        return view('livewire.users', [
-            'users' => User::latest()
-                ->where('name', 'like', "%{$this->searchQuery}%")
-                ->paginate(6)
-        ]);
     }
 }

@@ -51,8 +51,6 @@ class UserRegisterForm extends Component
         // Dispatch an event to notify other components
         $this->dispatch('user-created');
     }
-    public function render()
-    {
-        return view('livewire.user-register-form');
-    }
+    
+    //? jika fungsi render() komponen livewire hanya mengembalikan view, maka bisa dihapus saja
 }
