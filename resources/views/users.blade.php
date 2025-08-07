@@ -17,10 +17,12 @@
     </head>
 
     <body class="bg-[#FDFDFC]">
-        {{-- @livewire('users') --}}
-        <livewire:users>
+        <div class="flex justify-content-center ">
+            @livewire('user-register-form')
+            @livewire('users-list')
+        </div>
 
-            <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
     </body>
 
 </html>
