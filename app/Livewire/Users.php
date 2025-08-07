@@ -5,14 +5,17 @@ namespace App\Livewire;
 use App\Models\User;
 use Livewire\Component;
 use Illuminate\Support\Str;
+use Livewire\WithPagination;
+use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Hash;
-use Livewire\WithFileUploads;
 
 
 class Users extends Component
 {
     use WithFileUploads;
+    use WithPagination;
+
     #[Validate('required|string|min:3|max:50')]
     public $name = '';
 
@@ -20,7 +23,7 @@ class Users extends Component
     public $email = '';
 
     #[Validate('required|string|min:4|max:50')]
-    public $password = 'password';
+    public $password = '';
 
     #[Validate('image|max:5000')]
     public $avatar;
@@ -51,7 +54,7 @@ class Users extends Component
     public function render()
     {
         return view('livewire.users', [
-            'users' => User::all()
+            'users' => User::paginate(6)
         ]);
     }
 }
