@@ -7,7 +7,7 @@
         <div class="mt-4 sm:mx-auto sm:w-full sm:max-w-sm">
             {{-- notifikasi berhasil --}}
             @if (session()->has('message'))
-                <div id="success-notification" class="relative w-full items-center max-w-7xl ">
+                <div id="success-notification" class="mt-2 relative w-full items-center max-w-7xl ">
                     <div class="px-3 py-4 border-l-4 border-green-500 rounded-r-lg bg-green-100/60">
                         <div class="flex">
                             <div class="flex-shrink-0">
@@ -114,11 +114,11 @@
                 <div>
                     <button
                         class="flex w-full justify-center rounded-lg bg-indigo-600 px-3 py-3 text-sm/6 font-semibold text-white shadow-xs  transition-all duration-150 cursor-pointer hover:shadow-md hover:shadow-indigo-200 hover:bg-indigo-500 hover:border hover:border-white hover:-translate-y-0.5 active:bg-indigo-600 active:translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                        wire:target="createUserForm" wire:loading.attr="disabled"
+                        wire:target="createNewUser" wire:loading.attr="disabled"
                         wire:loading.class="opacity-50 cursor-loading hover:translate-y-0 hover:shadow-none"
                         wire:loading.remove.class="opacity-100 cursor-pointer">
-                        <span wire:loading.remove wire:target="createUserForm">Create new user</span>
-                        <span wire:loading wire:target="createUserForm">
+                        <span wire:loading.remove wire:target="createNewUser">Create new user</span>
+                        <span wire:loading wire:target="createNewUser">
                             <span class="loading loading-spinner loading-sm mr-1"></span>
                             Saving...
                         </span>
