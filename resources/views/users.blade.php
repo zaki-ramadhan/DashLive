@@ -18,8 +18,8 @@
 
     <body class="bg-[#FDFDFC]">
         <div class="flex justify-content-center ">
-            @livewire('user-register-form')
-            @livewire('users-list')
+            <livewire:user-register-form lazy />
+            <livewire:users-list lazy />
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>

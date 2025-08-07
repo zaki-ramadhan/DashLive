@@ -23,8 +23,15 @@ class UsersList extends Component
         $this->resetPage();
     }
 
+    // template skeleton loading component nya
+    public function placeholder()
+    {
+        return view('livewire.placeholders.users-list-skeleton');
+    }
+
     public function render()
     {
+        sleep(3);
         return view('livewire.users-list', [
             'users' => User::latest()
                 ->where('name', 'like', "%{$this->searchQuery}%")

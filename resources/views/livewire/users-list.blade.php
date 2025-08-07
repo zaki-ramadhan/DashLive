@@ -1,4 +1,5 @@
-<div class="w-1/2 mx-auto py-10 pe-10">
+{{-- wire:poll agar page resfresh otomatis tiap 2.5 detik (bisa di custom) --}}
+<div wire:poll class="w-1/2 mx-auto py-10 pe-10">
     <h2 class="mt-10 mb-6 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Users List</h2>
 
     {{-- search input --}}
@@ -12,7 +13,7 @@
                         clip-rule="evenodd" />
                 </svg>
             </div>
-            
+
             {{-- .live untuk live searching --}}
             <input wire:model.live="searchQuery" type="search" id="search"
                 class="block w-full p-4 pl-10 pr-28 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
