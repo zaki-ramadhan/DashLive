@@ -1,14 +1,11 @@
 @import "tailwindcss";
-@plugin "flyonui" {
-    themes: light --default;
-}
 @plugin "@iconify/tailwind4";
-@import "flyonui/variants.css";
-@source "../node_modules/flyonui/flyonui.js";
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
+
+@plugin "daisyui";
 
 @theme {
     --font-sans: "Inter", "Instrument Sans", ui-sans-serif, system-ui,
