@@ -38,7 +38,7 @@ class UsersList extends Component
         return User::latest()
             ->where('name', 'like', "%{$this->searchQuery}%")
             ->paginate(6);
-    }
+    }   
 
-    //? jika fungsi render() komponen livewire hanya mengembalikan view, maka bisa dihapus saja
+    //? jika fungsi render() komponen livewire hanya mengembalikan view dan nama view yang dikembalikan sama dengan nama class, maka bisa dihapus saja
 }

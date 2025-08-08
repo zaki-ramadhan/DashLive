@@ -32,7 +32,7 @@
             <form wire:submit.prevent="createNewUser" action="#" method="POST" id="createUserForm"
                 class="space-y-6 mt-4">
                 <div>
-                    <label for="name" class="block text-sm/6 font-medium text-gray-900 text-left">Name</label>
+                    <label for="name" class="block text-sm/6 font-medium text-gray-900 text-left">Name<span class="text-red-500 ml-1">*</span></label>
                     <div class="mt-2">
                         <input wire:model="name" id="name" type="text" name="name" autocomplete="name"
                             class="block w-full rounded-md bg-white px-3 py-2.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
@@ -46,7 +46,7 @@
                 <div>
                     <div class="flex items-center justify-between">
                         <label for="email" class="block text-sm/6 font-medium text-gray-900">Email
-                            Address</label>
+                            Address<span class="text-red-500 ml-1">*</span></label>
                     </div>
                     <div class="mt-2">
                         <input wire:model="email" id="email" type="email" name="email" autocomplete="email"
@@ -60,7 +60,7 @@
                 {{-- password input --}}
                 <div>
                     <div class="flex items-center justify-between">
-                        <label for="password" class="block text-sm/6 font-medium text-gray-900">Password</label>
+                        <label for="password" class="block text-sm/6 font-medium text-gray-900">Password<span class="text-red-500 ml-1">*</span></label>
                     </div>
                     <div class="mt-2">
                         <input wire:model="password" id="password" type="password" name="password"
@@ -75,7 +75,7 @@
                 {{-- avatar input --}}
                 <div class="col-span-full">
                     <label for="profile-picture" class="block text-sm/6 font-medium text-gray-900 text-left">Profile
-                        picture</label>
+                        picture<span class="text-red-500 ml-1">*</span></label>
 
 
                     <div class="mt-2 flex justify-center rounded-xl border border-dashed border-gray-900/25 px-6 py-10">
@@ -92,7 +92,7 @@
                                     <span>Upload a file</span>
                                     <input wire:model="avatar" id="avatar" type="file" name="avatar"
                                         class="sr-only" accept="image/png, imaege/jpeg, image/jpg" />
-                                </label>
+                                    </label>
                                 <p class="pl-1">or drag and drop</p>
                             </div>
                             <p class="text-xs/5 text-gray-600">PNG, JPG, JPEG up to 5MB</p>

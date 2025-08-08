@@ -52,5 +52,5 @@ class UserRegisterForm extends Component
         $this->dispatch('user-created');
     }
     
-    //? jika fungsi render() komponen livewire hanya mengembalikan view, maka bisa dihapus saja
+    //? jika fungsi render() komponen livewire hanya mengembalikan view dan nama view yang dikembalikan sama dengan nama class, maka bisa dihapus saja
 }

@@ -19,7 +19,7 @@
                 class="block w-full p-4 pl-10 pr-28 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Search User(s)..." autocomplete="off" />
             <button type="submit"
-                class="absolute right-2.5 bottom-1/2 translate-y-1/2 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 text-white font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                class="absolute right-2.5 bottom-1/2 translate-y-1/2 bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-300 text-white font-medium rounded-lg text-sm px-4 py-2 cursor-pointer dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800">
                 Search
             </button>
         </div>
