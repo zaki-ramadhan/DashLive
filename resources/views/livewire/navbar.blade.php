@@ -22,19 +22,19 @@
             <ul
                 class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 <li>
-                    <a href="/" wire:navigate class="text-base mx-2 block py-2 px-3 text-white bg-indigo-700 rounded-sm md:bg-transparent md:text-indigo-700 md:p-0 md:dark:text-indigo-500"
+                    <a href="/" wire:navigate wire:current.exact="md:text-indigo-600" class="text-base mx-2 block py-2 px-3 text-gray-900 bg-indigo-700 rounded-sm md:bg-transparent md:p-0 md:dark:text-indigo-500"
                         aria-current="page">Home</a>
                 </li>
                 <li>
-                    <a href=" /users" wire:navigate
+                    <a href=" /users" wire:navigate wire:current="md:text-indigo-600"
                         class="text-base mx-2 block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-indigo-700 md:p-0 md:dark:hover:text-indigo-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Users</a>
                 </li>
                 <li>
-                    <a href="/about-us" wire:navigate
+                    <a href="/about-us" wire:navigate wire:current="md:text-indigo-600"
                         class="text-base mx-2 block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-indigo-700 md:p-0 md:dark:hover:text-indigo-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
                 </li>
                 <li>
-                    <a href="/contact" wire:navigate
+                    <a href="/contact" wire:navigate wire:current="md:text-indigo-600"
                         class="text-base mx-2 block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-indigo-700 md:p-0 md:dark:hover:text-indigo-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
                 </li>
             </ul>
