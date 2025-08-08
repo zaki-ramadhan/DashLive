@@ -1,4 +1,4 @@
-<div">
+<div>
     <!-- Hero Section -->
     <section class="py-16 lg:py-32 relative bg-[url('https://pagedone.io/asset/uploads/1691055810.png')] bg-center bg-cover">
         <!-- Decorative elements -->
@@ -198,4 +198,6 @@
             </div>
         </div>
     </section>
+
+    <livewire:footer/>
 </div>
