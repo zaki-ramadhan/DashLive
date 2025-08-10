@@ -6,7 +6,7 @@
         </a>
         <div class="md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <a href="/" wire:navigate
-                class="bg-indigo-600 inline-block px-3 py-2.5 text-sm/6 rounded-lg font-semibold text-white shadow-xs  transition-all duration-150 cursor-pointer hover:shadow-md hover:shadow-indigo-200 hover:bg-indigo-500 hover:border hover:border-white hover:scale-101 active:bg-indigo-600 active:scale-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
+                class="bg-indigo-700 inline-block px-3 py-2.5 text-sm/6 rounded-lg font-semibold text-white shadow-xs  transition-all duration-150 cursor-pointer hover:shadow-md hover:shadow-indigo-200 hover:bg-indigo-600 hover:border hover:border-white hover:scale-101 active:bg-indigo-700 active:scale-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
             <button data-collapse-toggle="navbar-sticky" type="button"
                 class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 aria-controls="navbar-sticky" aria-expanded="false">

@@ -1,6 +1,7 @@
 <footer class="pt-16 px-2">
     <div class="mx-auto max-w-7xl px-4 lg:px-12 p-12 pb-8 rounded-2xl bg-neutral-100">
-        <div class="flex flex-col min-[830px]:flex-row items-center justify-between gap-6 pb-10 border-b-2 border-gray-200">
+        <div
+            class="flex flex-col min-[830px]:flex-row items-center justify-between gap-6 pb-10 border-b-2 border-gray-200">
             <a href="/" wire:navigate class="flex items-center space-x-1 rtl:space-x-reverse">
                 <img src="/img/dashlive-logo.svg" class="h-14" alt="DashLive Logo" title="DashLive">
                 <span class="self-center text-lg font-bold whitespace-nowrap text-slate-800">DashLive</span>
@@ -31,16 +32,34 @@
         <div class="pt-7 flex flex-col min-[520px]:flex-row items-center justify-between gap-6">
             <span class="text-sm text-gray-500 ">© <a href="/">DashLive</a> 2025, All rights reserved.</span>
             <div class="flex items-center gap-4">
-                <a href="javascript:;"
+
+                {{-- github --}}
+                <a href="https://github.com/zaki-ramadhan" target="_blank"
                     class="border border-gray-300 p-2 rounded-full aspect-square text-gray-700 transition-all duration-500 hover:text-indigo-600 hover:border-indigo-600 focus-within:outline-0 focus-within:text-indigo-600 focus-within:border-indigo-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                        fill="none">
-                        <path
-                            d="M11.3214 8.93666L16.4919 3.05566H15.2667L10.7772 8.16205L7.1914 3.05566H3.05566L8.47803 10.7774L3.05566 16.9446H4.28097L9.022 11.552L12.8088 16.9446H16.9446L11.3211 8.93666H11.3214ZM9.64322 10.8455L9.09382 10.0765L4.72246 3.95821H6.60445L10.1322 8.8959L10.6816 9.66481L15.2672 16.083H13.3852L9.64322 10.8458V10.8455Z"
-                            fill="currentColor" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path d="M12 0.297c-6.63 0-12 5.373-12 12 0 5.303
+                            3.438 9.8 8.205 11.385.6.113.82-.258.82-.577
+                            0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61
+                            -.546-1.385-1.333-1.754-1.333-1.754-1.09-.745.084-.729.084-.729
+                            1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.304 3.492.997
+                            .108-.776.418-1.305.76-1.605-2.665-.305-5.466-1.334-5.466-5.93
+                            0-1.31.467-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176
+                            0 0 1.005-.322 3.3 1.23a11.48 11.48 0 0 1 3.003-.404
+                            c1.02.005 2.045.138 3.003.404 2.28-1.552 3.285-1.23
+                            3.285-1.23.645 1.653.24 2.873.12 3.176
+                            .765.84 1.23 1.91 1.23 3.22
+                            0 4.61-2.805 5.625-5.475 5.92
+                            .43.37.81 1.096.81 2.22
+                            0 1.606-.015 2.896-.015 3.286
+                            0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297
+                            c0-6.627-5.373-12-12-12" />
                     </svg>
                 </a>
-                <a href="javascript:;"
+
+
+                {{-- instagram --}}
+                <a href="https://www.instagram.com/zqramadhan_" target="_blank"
                     class="border border-gray-300 p-2 rounded-full aspect-square text-gray-700 transition-all duration-500 hover:text-indigo-600 hover:border-indigo-600 focus-within:outline-0 focus-within:text-indigo-600 focus-within:border-indigo-600">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
                         fill="none">
@@ -49,7 +68,9 @@
                             fill="currentColor" />
                     </svg>
                 </a>
-                <a href="javascript:;"
+
+                {{-- linkedin --}}
+                <a href="https://www.linkedin.com/in/zaki-ramadhan/" target="_blank"
                     class="border border-gray-300 p-2 rounded-full aspect-square text-gray-700 transition-all duration-500 hover:text-indigo-600 hover:border-indigo-600 focus-within:outline-0 focus-within:text-indigo-600 focus-within:border-indigo-600">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
                         fill="none">
@@ -58,7 +79,9 @@
                             fill="currentColor" />
                     </svg>
                 </a>
-                <a href="javascript:;"
+
+                {{-- youtube --}}
+                {{-- <a href="javascript:;" target="_blank"
                     class="border border-gray-300 p-2 rounded-full aspect-square text-gray-700 transition-all duration-500 hover:text-indigo-600 hover:border-indigo-600 focus-within:outline-0 focus-within:text-indigo-600 focus-within:border-indigo-600">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
                         fill="none">
@@ -66,7 +89,7 @@
                             d="M15.9329 5.13919C16.5667 5.31036 17.0648 5.80978 17.2332 6.44286C17.5396 7.59178 17.5396 9.99044 17.5396 9.99044C17.5396 9.99044 17.5396 12.3891 17.2332 13.538C17.0625 14.1734 16.5643 14.6729 15.9329 14.8417C14.7869 15.1489 10.1889 15.1489 10.1889 15.1489C10.1889 15.1489 5.5932 15.1489 4.44487 14.8417C3.81106 14.6705 3.3129 14.1711 3.14451 13.538C2.83813 12.3891 2.83813 9.99044 2.83813 9.99044C2.83813 9.99044 2.83813 7.59178 3.14451 6.44286C3.31524 5.80744 3.8134 5.30801 4.44487 5.13919C5.5932 4.83203 10.1889 4.83203 10.1889 4.83203C10.1889 4.83203 14.7869 4.83203 15.9329 5.13919ZM12.5393 9.99044L8.72007 12.2015V7.77936L12.5393 9.99044Z"
                             fill="currentColor" />
                     </svg>
-                </a>
+                </a> --}}
             </div>
         </div>
     </div>

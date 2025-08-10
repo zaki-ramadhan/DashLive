@@ -9,32 +9,78 @@
                     We are deeply committed to delivering unparalleled service and unwavering support to ensure your
                     experience exceeds expectations.
                 </p>
-                <form class="space-y-6 text-gray-700">
+
+                {{-- notifikasi berhasil --}}
+                @if (session()->has('message'))
+                    <div id="success-notification" class="-mt-3 mb-5 relative w-full items-center max-w-7xl ">
+                        <div class="px-3 py-4 border-l-4 border-green-500 rounded-r-lg bg-green-100/60">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <svg class="w-5 h-5 text-green-400" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-3">
+                                    <div class="text-sm text-green-600">
+                                        <p>{{ session('message') }} ✍🏽!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+
+                <form wire:submit.prevent="createNewMessage" action="#" method="POST" id="createNewMessage"
+                    class="space-y-6 text-gray-700">
+
+                    {{-- subject --}}
                     <div>
                         <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject <span
                                 class="text-red-500">*</span></label>
-                        <input type="text" id="subject" name="subject"
-                            class="w-full text-sm bg-white px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600"
-                            required />
+                        <input wire:model="form.subject" type="text" id="subject" name="subject" autocomplete="subject"
+                            class="w-full text-sm bg-white px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600" />
+                        @error('form.subject')
+                            <p class="mt-2 text-red-600 dark:text-red-500 text-xs text-left">{{ $message }}</p>
+                        @enderror
                     </div>
+
+                    {{-- email --}}
                     <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address<span
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Your Email<span
                                 class="text-red-500">*</span></label>
-                        <input type="email" id="email" name="email"
-                            class="w-full text-sm bg-white px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600"
-                            required />
+                        <input wire:model="form.email" type="email" id="email" name="email" autocomplete="email"
+                            class="w-full text-sm bg-white px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600" />
+                        @error('form.email')
+                            <p class="mt-2 text-red-600 dark:text-red-500 text-xs text-left">{{ $message }}</p>
+                        @enderror
                     </div>
+
+                    {{-- message --}}
                     <div>
                         <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message <span
                                 class="text-red-500">*</span></label>
-                        <textarea id="message" name="message" rows="5"
-                            class="w-full text-sm bg-white px-4 py-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-indigo-600"
-                            required></textarea>
+                        <textarea wire:model="form.message" id="message" name="message" rows="5"
+                            class="w-full text-sm bg-white px-4 py-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-indigo-600"></textarea>
+                        @error('form.message')
+                            <p class="mt-2 text-red-600 dark:text-red-500 text-xs text-left">{{ $message }}</p>
+                        @enderror
                     </div>
+
+                    {{-- submit btn --}}
                     <div>
                         <button type="submit"
-                            class="w-full bg-indigo-600 text-white shadow-xs  transition-all duration-150 cursor-pointer hover:shadow-md hover:shadow-indigo-200 hover:bg-indigo-500 hover:border hover:border-white hover:-translate-y-0.5 active:bg-indigo-600 active:translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 font-semibold py-3 px-6 rounded-lg">
-                            Submit
+                            class="w-full bg-indigo-600 text-white shadow-xs  transition-all duration-150 cursor-pointer hover:shadow-md hover:shadow-indigo-200 hover:bg-indigo-500 hover:border hover:border-white hover:-translate-y-0.5 active:bg-indigo-600 active:translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 font-semibold py-3 px-6 rounded-lg"
+                            wire:target="createNewMessage" wire:loading.attr="disabled"
+                            wire:loading.class="opacity-50 cursor-loading hover:translate-y-0 hover:shadow-none"
+                            wire:loading.remove.class="opacity-100 cursor-pointer">
+                            <span wire:loading.remove wire:target="createNewMessage">Submit</span>
+                            <span wire:loading wire:target="createNewMessage">
+                                <span class="loading loading-spinner loading-sm mr-1"></span>
+                                Saving...
+                            </span>
                         </button>
                     </div>
                 </form>
@@ -57,8 +103,8 @@
                         </svg>
                         <div>
                             <h4 class="font-semibold text-lg mb-1">Address</h4>
-                            <p class="text-white/80">Cirebon, West Java, <br /><strong
-                                    class="text-white">Indonesia</strong>
+                            <p class="text-white/80">Cirebon, West Java, <br />
+                                <strong class="text-white">Indonesia</strong>
                             </p>
                         </div>
                     </div>
@@ -75,8 +121,9 @@
 
                         <div>
                             <h4 class="font-semibold text-lg mb-1 text-indigo-600">Contact</h4>
-                            <p class="text-gray-500">Talk to us and see how we can work<br /><strong
-                                    class="text-gray-700">0812-1477-2370</strong></p>
+                            <p class="text-gray-500">Talk to us and see how we can work<br />
+                                <strong class="text-gray-700 select-all">081214772370</strong>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -90,16 +137,17 @@
                         </svg>
                         <div>
                             <h4 class="font-semibold text-lg mb-1 text-indigo-600">Email</h4>
-                            <p class="text-gray-500">We're usually replying within 24 hours<br /><strong
-                                    class="text-gray-700">zakiram4dhan@gmail.com</strong></p>
+                            <p class="text-gray-500">We're usually replying within 24 hours<br />
+                                <strong class="text-gray-700 select-all">zakiram4dhan@gmail.com</strong>
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-gray-100/70 border border-gray-100/90 rounded-xl px-6 py-5 text-gray-700">
                     <div class="flex items-start gap-4">
-                        <svg class="w-6 h-6 mt-1 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2"
-                            viewBox="0 0 24 24">
+                        <svg class="w-6 h-6 mt-1 text-indigo-600" fill="none" stroke="currentColor"
+                            stroke-width="2" viewBox="0 0 24 24">
                             <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         <div>
