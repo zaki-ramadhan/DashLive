@@ -1,3 +1,4 @@
+<div class="w-1/3 mx-auto space-y-4 text-center py-10">
     <div class="px-6 lg:px-8 flex flex-col items-center justify-center">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
             <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Create New User</h2>
