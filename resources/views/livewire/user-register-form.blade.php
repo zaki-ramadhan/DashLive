@@ -11,7 +11,7 @@
                     <div class="px-3 py-4 border-l-4 border-green-500 rounded-r-lg bg-green-100/60">
                         <div class="flex">
                             <div class="flex-shrink-0">
-                                <svg class="w-5 h-5 text-green-400" xmlns="http://www.w3.org/2000/svg"
+                                <svg class="w-5 h-5 text-green-400" xmlns="https://www.w3.org/2000/svg"
                                     viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                     <path fill-rule="evenodd"
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -32,7 +32,8 @@
             <form wire:submit.prevent="createNewUser" action="#" method="POST" id="createUserForm"
                 class="space-y-6 mt-4">
                 <div>
-                    <label for="name" class="block text-sm/6 font-medium text-gray-900 text-left">Name<span class="text-red-500 ml-1">*</span></label>
+                    <label for="name" class="block text-sm/6 font-medium text-gray-900 text-left">Name<span
+                            class="text-red-500 ml-1">*</span></label>
                     <div class="mt-2">
                         <input wire:model="name" id="name" type="text" name="name" autocomplete="name"
                             class="block w-full rounded-md bg-white px-3 py-2.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
@@ -60,7 +61,8 @@
                 {{-- password input --}}
                 <div>
                     <div class="flex items-center justify-between">
-                        <label for="password" class="block text-sm/6 font-medium text-gray-900">Password<span class="text-red-500 ml-1">*</span></label>
+                        <label for="password" class="block text-sm/6 font-medium text-gray-900">Password<span
+                                class="text-red-500 ml-1">*</span></label>
                     </div>
                     <div class="mt-2">
                         <input wire:model="password" id="password" type="password" name="password"
@@ -92,7 +94,7 @@
                                     <span>Upload a file</span>
                                     <input wire:model="avatar" id="avatar" type="file" name="avatar"
                                         class="sr-only" accept="image/png, imaege/jpeg, image/jpg" />
-                                    </label>
+                                </label>
                                 <p class="pl-1">or drag and drop</p>
                             </div>
                             <p class="text-xs/5 text-gray-600">PNG, JPG, JPEG up to 5MB</p>
@@ -129,4 +131,3 @@
         </div>
     </div>
 </div>
-p

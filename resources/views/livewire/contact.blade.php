@@ -16,7 +16,7 @@
                         <div class="px-3 py-4 border-l-4 border-green-500 rounded-r-lg bg-green-100/60">
                             <div class="flex">
                                 <div class="flex-shrink-0">
-                                    <svg class="w-5 h-5 text-green-400" xmlns="http://www.w3.org/2000/svg"
+                                    <svg class="w-5 h-5 text-green-400" xmlns="https://www.w3.org/2000/svg"
                                         viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd"
                                             d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -40,7 +40,8 @@
                     <div>
                         <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject <span
                                 class="text-red-500">*</span></label>
-                        <input wire:model="form.subject" type="text" id="subject" name="subject" autocomplete="subject"
+                        <input wire:model="form.subject" type="text" id="subject" name="subject"
+                            autocomplete="subject"
                             class="w-full text-sm bg-white px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600" />
                         @error('form.subject')
                             <p class="mt-2 text-red-600 dark:text-red-500 text-xs text-left">{{ $message }}</p>
@@ -113,7 +114,7 @@
                 <div class="bg-gray-100/70 border border-gray-100/90 rounded-xl px-6 py-5 text-gray-700">
                     <div class="flex items-start gap-4">
                         <svg class="w-6 h-6 mt-1 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2"
-                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3 5.5a16 16 0 0015.5 15.5l2-2a1.5 1.5 0 00-.3-2.4l-3.2-1.8a1.5 1.5 0 00-1.7.2l-1 1a12.5 12.5 0 01-5.6-5.6l1-1a1.5 1.5 0 00.2-1.7l-1.8-3.2a1.5 1.5 0 00-2.4-.3l-2 2z" />
                         </svg>
@@ -130,7 +131,7 @@
 
                 <div class="bg-gray-100/70 border border-gray-100/90 rounded-xl px-6 py-5 text-gray-700">
                     <div class="flex items-start gap-4">
-                        <svg class="w-6 h-6 mt-1 text-indigo-600" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        <svg class="w-6 h-6 mt-1 text-indigo-600" fill="none" xmlns="https://www.w3.org/2000/svg"
                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z" />
